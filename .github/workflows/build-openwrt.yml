@@ -83,6 +83,7 @@ jobs:
         with:
           path: |
             /mnt/workdir/openwrt/dl
+            !/mnt/workdir/openwrt/dl/go-mod-cache
             /mnt/workdir/openwrt/.ccache
           key: openwrt-${{ inputs.repo }}-${{ inputs.branch }}-${{ inputs.cache_scope }}-${{ hashFiles('feeds/**', 'packages/**', 'scripts/**', 'configs/**', 'manifests/**') }}
           restore-keys: |
